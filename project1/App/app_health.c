@@ -90,5 +90,15 @@ void app_health_set_thresholds(float temp_high_c, float vdd_low_mv)
     g_app_state.vdd_low_mv = vdd_low_mv;
 }
 
+float app_health_get_temp_threshold(void)
+{
+    return g_app_state.temp_high_c;
+}
+
+float app_health_get_vdd_threshold(void)
+{
+    return g_app_state.vdd_low_mv;
+}
+
 
 
