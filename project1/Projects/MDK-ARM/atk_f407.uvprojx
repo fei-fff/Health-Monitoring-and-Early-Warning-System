@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\User;..\..\Drivers;..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include;..\..\Drivers\CMSIS\Include;..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\Middlewares;..\..\Drivers\BSP\LCD;..\..\Drivers\BSP\ADC;..\..\Drivers\BSP\TIMER</IncludePath>
+              <IncludePath>..\..\User;..\..\Drivers;..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include;..\..\Drivers\CMSIS\Include;..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\Middlewares;..\..\Drivers\BSP\LCD;..\..\Drivers\BSP\ADC;..\..\Drivers\BSP\TIMER;..\..\App</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -552,14 +552,17 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Readme</GroupName>
+          <GroupName>App</GroupName>
           <Files>
             <File>
-              <FileName>readme.txt</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\readme.txt</FilePath>
+              <FileName>app_health.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\App\app_health.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>Readme</GroupName>
         </Group>
       </Groups>
     </Target>
