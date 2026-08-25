@@ -1,23 +1,23 @@
 /**
  ****************************************************************************************************
  * @file        led.h
- * @author      ÕýµãÔ­×ÓÍÅ¶Ó(ALIENTEK)
+ * @author      ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½Å¶ï¿½(ALIENTEK)
  * @version     V1.0
  * @date        2021-10-14
- * @brief       LED Çý¶¯´úÂë
- * @license     Copyright (c) 2020-2032, ¹ãÖÝÊÐÐÇÒíµç×Ó¿Æ¼¼ÓÐÏÞ¹«Ë¾
+ * @brief       LED ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * @license     Copyright (c) 2020-2032, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¿Æ¼ï¿½ï¿½ï¿½ï¿½Þ¹ï¿½Ë¾
  ****************************************************************************************************
  * @attention
  *
- * ÊµÑéÆ½Ì¨£ºÕýµãÔ­×Ó Ì½Ë÷Õß F407¿ª·¢°å
- * ÔÚÏßÊÓÆµ£ºwww.yuanzige.com
- * ¼¼ÊõÂÛÌ³£ºhttp://www.openedv.com/forum.php
- * ¹«Ë¾ÍøÖ·£ºwww.alientek.com
- * ¹ºÂòµØÖ·£ºzhengdianyuanzi.tmall.com
+ * Êµï¿½ï¿½Æ½Ì¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ Ì½ï¿½ï¿½ï¿½ï¿½ F407ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æµï¿½ï¿½www.yuanzige.com
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì³ï¿½ï¿½http://www.openedv.com/forum.php
+ * ï¿½ï¿½Ë¾ï¿½ï¿½Ö·ï¿½ï¿½www.alientek.com
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½zhengdianyuanzi.tmall.com
  *
- * ÐÞ¸ÄËµÃ÷
+ * ï¿½Þ¸ï¿½Ëµï¿½ï¿½
  * V1.0 20211014
- * µÚÒ»´Î·¢²¼
+ * ï¿½ï¿½Ò»ï¿½Î·ï¿½ï¿½ï¿½
  *
  ****************************************************************************************************
  */
@@ -29,19 +29,19 @@
 
 
 /******************************************************************************************/
-/* Òý½Å ¶¨Òå */
+/* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 
-#define LED0_GPIO_PORT                  GPIOE
-#define LED0_GPIO_PIN                   GPIO_PIN_0
-#define LED0_GPIO_CLK_ENABLE()          do{ __HAL_RCC_GPIOE_CLK_ENABLE(); }while(0)             /* PF¿ÚÊ±ÖÓÊ¹ÄÜ */
+#define LED0_GPIO_PORT                  GPIOF
+#define LED0_GPIO_PIN                   GPIO_PIN_9
+#define LED0_GPIO_CLK_ENABLE()          do{ __HAL_RCC_GPIOF_CLK_ENABLE(); }while(0)             /* PFï¿½ï¿½Ê±ï¿½ï¿½Ê¹ï¿½ï¿½ */
 
-#define LED1_GPIO_PORT                  GPIOE
-#define LED1_GPIO_PIN                   GPIO_PIN_1
-#define LED1_GPIO_CLK_ENABLE()          do{ __HAL_RCC_GPIOE_CLK_ENABLE(); }while(0)             /* PF¿ÚÊ±ÖÓÊ¹ÄÜ */
+#define LED1_GPIO_PORT                  GPIOF
+#define LED1_GPIO_PIN                   GPIO_PIN_10
+#define LED1_GPIO_CLK_ENABLE()          do{ __HAL_RCC_GPIOF_CLK_ENABLE(); }while(0)             /* PFï¿½ï¿½Ê±ï¿½ï¿½Ê¹ï¿½ï¿½ */
 
 /******************************************************************************************/
 
-/* LED¶Ë¿Ú¶¨Òå */
+/* LEDï¿½Ë¿Ú¶ï¿½ï¿½ï¿½ */
 #define LED0(x)   do{ x ? \
                       HAL_GPIO_WritePin(LED0_GPIO_PORT, LED0_GPIO_PIN, GPIO_PIN_SET) : \
                       HAL_GPIO_WritePin(LED0_GPIO_PORT, LED0_GPIO_PIN, GPIO_PIN_RESET); \
@@ -52,12 +52,12 @@
                       HAL_GPIO_WritePin(LED1_GPIO_PORT, LED1_GPIO_PIN, GPIO_PIN_RESET); \
                   }while(0)       /* LED1 = GREEN */
 
-/* LEDÈ¡·´¶¨Òå */
+/* LEDÈ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
 #define LED0_TOGGLE()    do{ HAL_GPIO_TogglePin(LED0_GPIO_PORT, LED0_GPIO_PIN); }while(0)       /* LED0 = !LED0 */
 #define LED1_TOGGLE()    do{ HAL_GPIO_TogglePin(LED1_GPIO_PORT, LED1_GPIO_PIN); }while(0)       /* LED1 = !LED1 */
 
 /******************************************************************************************/
-/* Íâ²¿½Ó¿Úº¯Êý*/
-void led_init(void);                                                                            /* ³õÊ¼»¯ */
+/* ï¿½â²¿ï¿½Ó¿Úºï¿½ï¿½ï¿½*/
+void led_init(void);                                                                            /* ï¿½ï¿½Ê¼ï¿½ï¿½ */
 
 #endif

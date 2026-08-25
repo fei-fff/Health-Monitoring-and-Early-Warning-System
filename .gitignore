@@ -3,3 +3,4 @@ firmware/
 project1/Output/
 project1/Projects/MDK-ARM/RTE/
 project1/Projects/MDK-ARM/*.uvguix.*
+*.csv

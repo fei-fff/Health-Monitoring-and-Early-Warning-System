@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\..\User;..\..\Drivers;..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include;..\..\Drivers\CMSIS\Include;..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\Middlewares;..\..\Drivers\BSP\LCD;..\..\Drivers\BSP\ADC;..\..\Drivers\BSP\TIMER;..\..\App</IncludePath>
+              <IncludePath>..\..\User;..\..\Drivers;..\..\Drivers\CMSIS\Device\ST\STM32F4xx\Include;..\..\Drivers\CMSIS\Include;..\..\Drivers\STM32F4xx_HAL_Driver\Inc;..\..\Middlewares;..\..\Drivers\BSP\LCD;..\..\Drivers\BSP\ADC;..\..\Drivers\BSP\TIMER;..\..\App;..\..\Drivers\BSP\LED;..\..\Protocol</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -558,6 +558,26 @@
               <FileName>app_health.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\App\app_health.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Protocol</GroupName>
+          <Files>
+            <File>
+              <FileName>protocol.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Protocol\protocol.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Drivers/BSP/LED</GroupName>
+          <Files>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Drivers\BSP\LED\led.c</FilePath>
             </File>
           </Files>
         </Group>

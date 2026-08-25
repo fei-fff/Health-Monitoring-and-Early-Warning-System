@@ -4,6 +4,8 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+
+
 typedef enum
 {
     ALARM_NONE        = 0,
@@ -32,7 +34,8 @@ void app_health_update(void);
 const health_sample_t *app_health_get_sample(void);
 bool app_health_is_alarm(void);
 void app_health_set_thresholds(float temp_high_c, float vdd_low_mv);
-
+float app_health_get_temp_threshold(void);
+float app_health_get_vdd_threshold(void);
 #endif
 
 
