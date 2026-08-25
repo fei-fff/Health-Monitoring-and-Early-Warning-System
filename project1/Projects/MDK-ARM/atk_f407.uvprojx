@@ -559,6 +559,11 @@
               <FileType>1</FileType>
               <FilePath>..\..\App\app_health.c</FilePath>
             </File>
+            <File>
+              <FileName>app_ui.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\App\app_ui.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
