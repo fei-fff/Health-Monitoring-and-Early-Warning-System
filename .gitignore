@@ -4,3 +4,8 @@ project1/Output/
 project1/Projects/MDK-ARM/RTE/
 project1/Projects/MDK-ARM/*.uvguix.*
 *.csv
+docs/
+__pycache__/
+*.pyc
+*.uvoptx
+project1/Projects/MDK-ARM/DebugConfig/
